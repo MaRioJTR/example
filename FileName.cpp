@@ -1,14 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int main() {
-  
+    char Char;
 
-	int array[5] = { 1, 2 };
+    printf("Input any char : ");
+    scanf_s("%c", &Char);
 
-	printf("%d", array[3]);
+    if ((Char >= 'a' && Char <= 'z') || (Char >= 'A' && Char <= 'Z'))
+        printf("This is an alphabet.\n");
+    else if ((Char >= '0' && Char <= '9') || (Char == '-'))
+        printf("This is a digit.\n");
+    else
+        printf("This is a special character.\n");
 
-
-
-
-
-	return 0;
+    return 0;
 }
